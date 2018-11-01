@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dijkstra Algoritm</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="script.js"></script>
+  </head>
+  <body onpageshow="modalAwal()" >
+    <h1>VISUALISASI ALGORITMA DIJKSTRA</h1>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="judul">
+          <h2>PERANGKAT LUNAK VISUALISASI ALGORITMA DIJKSRA</h2>
+        </div>
+
+        <p>Perangkat lunak visualisasi Algoritma Dijkstra merupakan sebuah perangkat lunak yang dapat
+           membantu anda dalam mempelajari Algoritma Dijkstra. Perangkat lunak ini akan memvisualisasikan penyelesaian
+          Algoritma Dijkstra ke dalam graf yang sifatnya interaktif. Pada perangkat lunak ini, anda dapat mencoba langsung
+          untuk melakukan perpindahan pada setiap simpul yang ada pada graf untuk menyelesaikan Algoritma Dijkstra. Terdapat 10 contoh
+          graf yang sudah disiapkan dan dapat dipilih oleh anda untuk membantu anda dalam mempelajari Algoritma Dijkstra.
+       </p>
+          <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">
+            <button  class="button" type="button" name="button">Apa itu algoritma Dijkstra?</button>
+          </a>
+          <button id="btnMulai" class="button" type="button" name="button"> Mulai</button>
+      </div>
+    </div>
+    <div class="graf" id="myGraf">
+      <div class="graf-content">
+        <div id="judul">
+          <h1>KATALOG GRAF</h1>
+        </div>
+        <table>
+          <h2>Graf Tidak Berarah :</h2>
+          <tr>
+            <td>
+              <img src="gambar/hasil1.png"  width="210" height="150" onclick="location.href='graf/graf0.html'">
+            </td>
+            <td>
+              <img src="gambar/hasil2.png"  width="210" height="150" onclick="location.href='graf/graf1.html'">
+            </td>
+            <td>
+              <img src="gambar/hasil3.png"  width="210" height="150" onclick="location.href='graf/graf2.html'">
+            </td>
+            <td>
+              <img src="gambar/hasil4.png"  width="210" height="150" onclick="location.href='graf/graf3.html'">
+            </td>
+            <td>
+              <img src="gambar/hasil5.png"  width="210" height="150" onclick="location.href='graf/graf4.html'">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="gambar/hasil6.png"  width="210" height="150" onclick="location.href='graf/graf5.html'">
+            </td>
+            <td>
+              <img src="gambar/hasil7.png"  width="210" height="150" onclick="location.href='graf/graf6.html'">
+            </td>
+          </tr>
+          </table>
+          <table>
+          <tr>
+            <h2>Graf Berarah :</h2>
+            <td>
+              <img src="gambar/hasil8.png"  width="210" height="150" onclick="location.href='graf/graf7.html'">
+            </td>
+            <td>
+              <img src="gambar/hasil9.png"  width="210" height="150" onclick="location.href='graf/graf8.html'">
+            </td>
+            <td>
+              <img src="gambar/hasil10.png"  width="210" height="150" onclick="location.href='graf/graf9.html'">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

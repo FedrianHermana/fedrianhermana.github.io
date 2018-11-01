@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="../JSGraf/graf5.js"></script>
+<script type="text/javascript" src="../JSGraf/dijkstra.js"></script>
+<link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="judul">VISUALISASI ALGORITMA DIJKSTRA</h1>
+    <svg height="1000" width="1100" >
+      <text x="10" y="310" fill="black">START</text>
+      <text x="270" y="12" fill="black">B</text>
+      <text x="230" y="555" fill="black">C</text>
+      <text x="400" y="255" fill="black">D</text>
+      <text x="600" y="50" fill="black">E</text>
+      <text x="550" y="560" fill="black">F</text>
+      <text x="730" y="505" fill="black">G</text>
+      <text x="845" y="300" fill="black">H</text>
+      <text x="930" y="35" fill="black">I</text>
+      <text x="955" y="550" fill="black">J</text>
+      <circle onclick="graf5()" cx="50" id = 'node1' cy="250" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes2()" cx="300" id = 'node2' cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes3()" cx="260" id = 'node3' cy="500" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes4()" cx="400" id = 'node4' cy="300" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes5()" cx="600" id = 'node5' cy="100" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes6()" cx="600" id = 'node6' cy="530" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes7()" cx="750" id = 'node7' cy="450" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes8()" cx="900" id = 'node8' cy="300" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes9()" cx="950" id = 'node9' cy="80" r="40" stroke="black" stroke-width="3" fill="red" />
+      <circle onclick="panggilRes10()" cx="1000" id = 'node10' cy="510" r="40" stroke="black" stroke-width="3" fill="red" />
+
+        <line id='01' x1="50" y1="250" x2="300" y2="50" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='02' x1="50" y1="250" x2="260" y2="500" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='13' x1="300" y1="50" x2="400" y2="300" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='23' x1="260" y1=500 x2="400" y2="300" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='25' x1="260" y1=500 x2="600" y2="550" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='35' x1="600" y1="530" x2="400" y2="300" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='45' x1="600" y1="530" x2="600" y2="100" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='34' x1="400" y1="300" x2="600" y2="100" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='14' x1="300" y1="50" x2="600" y2="100" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='46' x1="600" y1="100" x2="750" y2="450" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='56' x1="600" y1="530" x2="750" y2="450" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='67' x1="750" y1="450" x2="900" y2="300" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='69' x1="750" y1="450" x2="1000" y2="510" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='47' x1="600" y1="100" x2="900" y2="300" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='48' x1="600" y1="100" x2="950" y2="80" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='78' x1="900" y1="300" x2="950" y2="80" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line id='79' x1="900" y1=300 x2="1000" y2="510" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line id='89' x1="950" y1=80 x2="1000" y2="510" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+          <foreignObject x="130" y="120" width="100" height="150">
+              <input id="input1" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="110" y="400" width="100" height="150">
+              <input id="input2" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="345" y="120" width="100" height="150">
+              <input id="input3" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="280" y="380" width="100" height="150">
+              <input id="input4" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="395" y="540" width="100" height="150">
+              <input id="input5" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="500" y="390" width="100" height="150">
+              <input id="input6" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="605" y="300" width="100" height="150">
+              <input id="input7" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="470" y="150" width="100" height="150">
+              <input id="input8" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="450" y="50" width="100" height="150">
+              <input id="input9" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="680" y="250" width="100" height="150">
+              <input id="input10" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="665" y="500" width="100" height="150">
+              <input id="input11" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="780" y="350" width="100" height="150">
+              <input id="input12" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="850" y="490" width="100" height="150">
+              <input id="input13" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="740" y="160" width="100" height="150">
+              <input id="input14" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="770" y="60" width="100" height="150">
+              <input id="input15" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="870" y="160" width="100" height="150">
+              <input id="input16" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="895" y="410" width="100" height="150">
+              <input id="input17" class="input" type="number"></input>
+          </foreignObject>
+          <foreignObject x="980" y="280" width="100" height="150">
+              <input id="input18" class="input" type="number"></input>
+          </foreignObject>
+
+
+          <foreignObject x="340" y="5" width="100" height="150">
+              <input id="hasil2" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="280" y="550" width="100" height="150">
+              <input id="hasil3" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="450" y="280" width="100" height="150">
+              <input id="hasil4" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="630" y="40" width="100" height="150">
+              <input id="hasil5" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="640" y="550" width="100" height="150">
+              <input id="hasil6" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="750" y="500" width="100" height="150">
+              <input id="hasil7" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="860" y="350" width="100" height="150">
+              <input id="hasil8" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="950" y="5" width="100" height="150">
+              <input id="hasil9" size="2" disabled></input>
+          </foreignObject>
+          <foreignObject x="1045" y="520" width="100" height="150">
+              <input id="hasil10" size="2" disabled></input>
+          </foreignObject>
+    </svg>
+    <div style="float:right">
+      <h5>TABEL JARAK DARI NODE START</h5>
+      <table id="tabelGraf1">
+      <tr>
+        <th>Node</th>
+        <th>Total Bobot</th>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>H</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>I</td>
+        <td>&infin;</td>
+      </tr>
+      <tr>
+        <td>J</td>
+        <td>&infin;</td>
+      </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+.input {
+        resize: horizontal;
+        width: 45px;
+    }
+
+th, td {
+    border: 1px solid black;
+}
+table{
+  width: 80%
+}
+#tabelHasil{
+  float: right;
+}
+#judul{
+  background-color: lightgrey;
+  color: blue;
+  text-align: center;
+  margin: auto;
+  border-style: solid;
+  width: 50%;
+  border-color: green;
+margin-bottom: 15px;
+}

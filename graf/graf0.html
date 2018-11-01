@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="../JSGraf/graf0.js"></script>
+<script type="text/javascript" src="../JSGraf/dijkstra.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<body >
+<h1 id="judul">VISUALISASI ALGORITMA DIJKSTRA</h1>
+<svg  height="400" width="700" >
+  <text x="0" y="11" fill="black">START</text>
+  <text x="270" y="11" fill="black">B</text>
+  <text x="270" y="350" fill="black">C</text>
+  <text x="10" y="350" fill="black">D</text>
+  <text x="510" y="140" fill="black">E</text>
+  <circle onclick="graf0()" cx="50" id = 'node1' cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+  <circle onclick="panggilRes2()" cx="300" id = 'node2' cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+  <circle onclick="panggilRes3()" cx="300" id = 'node3' cy="300" r="40" stroke="black" stroke-width="3" fill="red" />
+  <circle onclick="panggilRes4()" cx="50" id = 'node4' cy="300" r="40" stroke="black" stroke-width="3" fill="red" />
+  <circle onclick="panggilRes5()" cx="550" id = 'node5' cy="175" r="40" stroke="black" stroke-width="3" fill="red" />
+
+  <line id='01' x1="90" y1="50" x2="260" y2="50"
+  style="stroke:rgb(255,0,0);stroke-width:2" />
+
+  <line id='12' x1="300" y1="90" x2="300" y2="260" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <line id='23' x1="90" y1="300" x2="260" y2="300" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <line id='03' x1="50" y1="90" x2="50" y2="260" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <line id='14' x1="340" y1="50" x2="510" y2="175" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <line id='24' x1="340" y1="300" x2="510" y2="175" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <line id='02' x1="79" y1="79" x2="271" y2="271" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <foreignObject x="160" y="20" width="100" height="150">
+      <input  class="input" type="number" id="input1"></input>
+  </foreignObject>
+  <foreignObject x="160" y="310" width="100" height="150">
+      <input class="input" type="number" id="input3"></input>
+  </foreignObject>
+  <foreignObject x="55" y="165" width="100" height="150">
+      <input id="input4" class="input" type="number"></input>
+  </foreignObject>
+  <foreignObject x="310" y="155" width="100" height="150">
+      <input id="input2" class="input" type="number"></input>
+  </foreignObject>
+  <foreignObject x="180" y="155" width="100" height="150">
+      <input id="input7" class="input" type="number"></input>
+  </foreignObject>
+  <foreignObject x="440" y="85" width="100" height="150">
+      <input id="input5" class="input" type="number"></input>
+  </foreignObject>
+  <foreignObject x="440" y="250" width="100" height="150">
+      <input id="input6" class="input" type="number"></input>
+  </foreignObject>
+
+  <foreignObject x="335" y="1" width="100" height="150">
+      <input id="hasil2" size="1" disabled></input>
+  </foreignObject>
+  <foreignObject x="335" y="330" width="100" height="150">
+      <input id="hasil3" size="1" disabled></input>
+  </foreignObject>
+  <foreignObject x="85" y="330" width="100" height="150">
+      <input id="hasil4" size="1" disabled></input>
+  </foreignObject>
+  <foreignObject x="600" y="130" width="100" height="150">
+      <input id="hasil5" size="1" disabled></input>
+  </foreignObject>
+  Sorry, your browser does not support inline SVG.
+</svg>
+  <div style="float:right">
+    <h2>Tabel Jarak dari Node START</h2>
+    <table id="tabelGraf1">
+    <tr>
+      <th>Node</th>
+      <th>Total Bobot</th>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>&infin;</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>&infin;</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>&infin;</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>&infin;</td>
+    </tr>
+    </table>
+  </div>
+
+</body>
+</html>
