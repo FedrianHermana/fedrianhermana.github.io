@@ -55,6 +55,7 @@ function cekHasilAkhir(hasilAkhir,temp,MatriksStatus,resHasil){
         for (var j = 0; j < temp.length; j++) {
           if (resHasil[s]==temp[i][j]) {
           MatriksStatus[i][j]=1;
+          //console.log(MatriksStatus);
           }
         }
       }
