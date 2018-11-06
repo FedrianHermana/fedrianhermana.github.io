@@ -94,7 +94,7 @@ function playBenar(){
 }
 
 function playSalah(){
-    var y = new Audio('audio.mkv');
+    var y = new Audio('audio.MKV');
     y.play();
 }
 function playFinish(){
