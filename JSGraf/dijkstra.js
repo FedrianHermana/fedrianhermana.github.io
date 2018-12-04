@@ -1,12 +1,6 @@
 
 function dijkstra(matriksGraf, matriksKetenggaan, MatriksStatus, statusNode, resHasil, temp) {
-  //var resHasil =[0, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER];
     var i=0;
-
-    // for (var i = 0; i < statusNode.length; i++) {
-    //   statusNode[i]=false;
-    // }
-    //var statusNode=[false, false, false, false, false];
     while(statusNode.includes(false)) {
       statusNode[i]=true;
 
@@ -15,35 +9,24 @@ function dijkstra(matriksGraf, matriksKetenggaan, MatriksStatus, statusNode, res
         if(matriksKetenggaan[i][j]==1){
 
           if(resHasil[j]>(resHasil[i]+matriksGraf[i][j])){
-           // console.log((resHasil[i]+graf[i][j]));
-           // console.log(resHasil[j]);
-           //console.log(resHasil[i]);
             resHasil[j]=resHasil[i]+matriksGraf[i][j];
             temp[i][j]=resHasil[i]+matriksGraf[i][j];
-
           }
-
         }
-
       }
       var idx = 0;
       var value = Number.MAX_SAFE_INTEGER;
       for (var g = 0; g < resHasil.length; g++) {
           if ((resHasil[g] < value)&&(statusNode[g])==false) {
             value = resHasil[g];
-            //console.log(statusNode);
-           // console.log(resHasil);
-           // console.log(value);
             idx = g;
           }
        }
 
-      //console.log(idxMin);
+
       i=idx;
 
 }
-
-  //  console.log(resHasil);
 }
 
 function cekHasilAkhir(hasilAkhir,temp,MatriksStatus,resHasil){
@@ -92,11 +75,13 @@ function cekInput(arr) {
 function playBenar(){
     var y = new Audio('benar.mp4');
     y.play();
+
 }
 
 function playSalah(){
     var y = new Audio('audio.MKV');
     y.play();
+
 }
 function playFinish(){
     var y = new Audio('finish.mp4');

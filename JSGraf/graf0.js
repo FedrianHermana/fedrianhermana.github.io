@@ -92,6 +92,7 @@ function panggilRes2(){
     }
     else{
       playSalah();
+      
     }
   }
   else{
